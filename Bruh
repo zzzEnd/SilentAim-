@@ -1,0 +1,35 @@
+	--Whitelist by EndArrival#9790
+
+	local allowedUsers = {
+		--your usernames here!
+		--names are CASE SENSITIVE!
+		[""] = true
+		[""] = true
+		[""] = true
+		[""] = true
+		[""] = true
+		[""] = true
+		[""] = true
+		[""] = true
+		[""] = true
+		[""] = true
+	}
+
+	game.Players.PlayerAdded:Connect(function(plr)
+		if allowedUsers[plr.EndArrival] then
+			warn(plr.Name.." joined.")
+		else
+			warn(plr.Name.." tried to join but they aren't whitelisted.")
+			plr:Kick("You are not whitelisted!")
+		end
+	end)
+
+
+	game.StarterGui:SetCore("SendNotification", {
+		Title = 'You're Whitelisted;
+		Text = 'You Can Now Use the Silent Aim';
+		Duration = 20;
+	})
+
+
+		loadstring(game:HttpGet("https://raw.githubusercontent.com/zzzEnd/Silent-Aim/main/Bruh%22))()
